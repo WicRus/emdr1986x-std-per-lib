@@ -50,6 +50,7 @@ extern "C" {
 #if ((__CC_ARM == 0) || (__ARMCC_VERSION < 5000000))
 	#include "MDR32F9Qx_board.h"
 #endif
+
 #include "MDR32F9Qx_lib.h"
 #include <stdint.h>
 
@@ -66,7 +67,7 @@ extern "C" {
 
 /* Select the header file for target microcontroller */
 #if defined ( USE_MDR1986VE9x )
-	#include "MDR32Fx.h"
+    #include "MDR1986VE9x.h"
 #elif defined (USE_MDR1986VE1T)
 	#include "MDR1986VE1T.h"
 #elif defined ( USE_MDR1986VE3 )
@@ -75,8 +76,9 @@ extern "C" {
 	#include "MDR1901VC1T.h"
 #elif defined (USE_MDR1986BE4)
 	#include "MDR1986BE4.h"
+#elif defined (USE_MDR1986VE8T)
+    #include "MDR1986VE8T.h"
 #endif
-
 /* Uncomment the line(s) below to define used JTAG port(s). Leave all commented
  * if there is no JTAG ports */
 #if (defined(USE_MDR1986VE9x) || defined (USE_MDR1901VC1T))
