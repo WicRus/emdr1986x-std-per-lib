@@ -32,6 +32,9 @@ extern "C" {
   *   		By calling the ETH_StructInit function the structure’s fields are set to their default values.
   *   		Only the parameters that will be set to a non-default value should be configured.
   */
+
+#if defined (USE_MDR1986VE1T) || defined (USE_MDR1986VE3)
+
 typedef struct {
 
 	/**
@@ -509,6 +512,9 @@ typedef union {
  * 	@{
  */
 
+
+
+
 void ETH_ClockDeInit(void);
 void ETH_PHY_ClockConfig(uint32_t clock_source, uint32_t PHY_HCLKdiv);
 void ETH_BRGInit(uint32_t ETH_HCLKdiv);
@@ -537,6 +543,8 @@ void ETH_DMAFrameRx(uint32_t * DstBuf, uint32_t BufferSize, uint32_t * SrcBuf);
 void ETH_DMAFrameTx(uint32_t * DstBuf, uint32_t BufferSize, uint32_t *  SrcBuf);
 
 FlagStatus ETH_GetFlagStatus(MDR_ETHERNET_TypeDef * ETHERNETx, uint16_t ETH_MAC_FLAG);
+
+#endif
 
 /** @} */ /* End of group ETH_Private_Function_Prototypes */
 

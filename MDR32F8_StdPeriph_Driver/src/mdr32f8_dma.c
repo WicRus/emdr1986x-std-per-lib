@@ -83,10 +83,10 @@
 	#else
 		DMA_CtrlDataTypeDef DMA_ControlTable[DMA_Channels_Number * (1 + DMA_AlternateData)] __attribute__ ((aligned (DATA_ALIGN)));
 	#endif
+#elif defined ( __GNUC__ )
+    DMA_CtrlDataTypeDef DMA_ControlTable[DMA_Channels_Number * (1 + DMA_AlternateData)] __attribute__((aligned(DATA_ALIGN)));
+
 #endif
-
-
-
 
 /** @} */ /* End of group DMA_Private_Variables */
 

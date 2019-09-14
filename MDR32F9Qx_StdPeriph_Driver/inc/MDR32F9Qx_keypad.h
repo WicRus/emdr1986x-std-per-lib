@@ -29,6 +29,8 @@ extern "C" {
   * @brief	KEYPAD Init Structure definition
   */
 
+#if defined (USE_MDR1986VE3)
+
 typedef struct {
 	uint32_t 		KeyRow;							/*!< Number of keys in a row matrix keyboard.
 														 Specifies the number of pins of the controller involved readers.
@@ -235,6 +237,8 @@ void KEYPAD_ITCmd(FunctionalState NewState);
 /** @} */ /* End of group KEYPAD */
 
 /** @} */ /* End of group __MDR32F9Qx_StdPeriph_Driver */
+
+#endif
 
 #ifdef __cplusplus
 } // extern "C" block end

@@ -30,6 +30,8 @@ extern "C" {
   * @brief	MIL_STD_1553 Init Structure definition
   */
 
+#if defined (USE_MDR1986VE1T) || defined (USE_MDR1986VE3)
+
 typedef struct {
 	uint32_t MIL_STD_1553_Mode; 					/*!< This member configures the MIL_STD_1553 mode.
 										 	 	 	 	 This parameter is one of @ref MIL_STD_1553_Mode values. */
@@ -277,6 +279,7 @@ typedef enum {
   * @{
   */
 
+
 void MIL_STD_1553_BRGInit(uint32_t MIL_STD_1553_BRG);
 void MIL_STD_1553_DeInit(MDR_MIL_STD_1553_TypeDef * MIL_STD_1553x);
 void MIL_STD_1553_Init(MDR_MIL_STD_1553_TypeDef * MIL_STD_1553x, MIL_STD_1553_InitTypeDef * MIL_STD_1553_InitStruct);
@@ -297,6 +300,8 @@ void MIL_STD_1553_WiteDataToSendBuffer(MDR_MIL_STD_1553_TypeDef * MIL_STD_1553x,
 void MIL_STD_1553_Transmitter_CMD(MDR_MIL_STD_1553_TypeDef * MIL_STD_1553x, uint32_t TRANSMITTERx, FunctionalState NewState);
 uint32_t MIL_STD_1553_GetErrorStatus(MDR_MIL_STD_1553_TypeDef * MIL_STD_1553x);
 void MIL_STD_1553_RERRCmd(MDR_MIL_STD_1553_TypeDef * MIL_STD_1553x, FunctionalState NewState);
+
+#endif
 
 /** @} */ /* End of group MIL_STD_1553_Exported_Functions */
 

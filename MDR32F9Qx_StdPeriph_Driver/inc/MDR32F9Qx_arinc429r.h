@@ -30,6 +30,8 @@ extern "C" {
   * @brief	ARINC429 Init Channel Structure definition
   */
 
+#if defined (USE_MDR1986VE1T) || defined (USE_MDR1986VE3)
+
 typedef struct {
 	uint32_t 		ARINC429R_CLK;		/*!< This member specifies the data reception speed.
 	 	 	 	 	 	 	 	 	 	 	 This parameter is one of @ref ARINC429R_CLK values.*/
@@ -177,6 +179,7 @@ uint32_t ARINC429R_ReceiveData(void);
 /** @} */ /* End of group ARINC429R */
 
 /** @} */ /* End of group __MDR32F9Qx_StdPeriph_Driver */
+#endif
 
 #ifdef __cplusplus
 } // extern "C" block end
