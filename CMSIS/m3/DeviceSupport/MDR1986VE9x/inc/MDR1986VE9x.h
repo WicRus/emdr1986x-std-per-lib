@@ -77,7 +77,7 @@ typedef enum IRQn
 
 /* Includes ------------------------------------------------------------------*/
 #include "core_cm3.h"
-#include "system_MDR32F9Qx.h"
+#include "system_MDR1986VE9x.h"
 
 /** @defgroup __Exported_types Exported types
   * @{
